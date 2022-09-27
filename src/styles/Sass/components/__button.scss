@@ -1,0 +1,39 @@
+.button {
+    height: 5.6rem;
+    width: 15rem;
+    padding: 0 0.8rem 0 2.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6rem;
+    -webkit-border-radius: 6rem;
+    -moz-border-radius: 6rem;
+    -ms-border-radius: 6rem;
+    -o-border-radius: 6rem;
+    cursor: pointer;
+    &:hover img {
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+    &__text {
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: $font-bold;
+        letter-spacing: 0.5rem;
+        line-height: 2.8rem;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        text-transform: uppercase;
+    }
+    & img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: none;
+        border-radius: 50%;
+        background-color: $gray;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}

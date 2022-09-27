@@ -1,0 +1,23 @@
+.quote {
+    width: 50%;
+    color: $white;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    &__top {
+        display: flex;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        & img {
+            margin-top: 0.8rem;
+            margin-left: 1.6rem;
+            opacity: 0.5;
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+}

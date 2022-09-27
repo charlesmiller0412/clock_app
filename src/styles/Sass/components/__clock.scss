@@ -1,0 +1,35 @@
+.clock {
+    width: 100%;
+    text-align: left;
+    &__top {
+        display: flex;
+        flex-direction: column;
+        &--intro {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            & img {
+                width: 2.4rem;
+                height: 2.4rem;
+                margin-right: 1.6rem;
+            }
+        }
+        &--data {
+            display: flex;
+            align-items: flex-end;
+            margin: 1.6rem 0;
+            width: fit-content;
+            &-time {
+            }
+            &-abbv {
+                font-size: 4rem;
+                font-weight: 300;
+                line-height: 2.8rem;
+                margin-bottom: 2.7rem;
+                margin-left: 1.1rem;
+            }
+        }
+    }
+    &__bottom {
+    }
+}

@@ -1,0 +1,37 @@
+.moreInfo {
+    width: 100vw;
+    height: 50vh;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 7.4rem 16.5rem;
+    &__left,
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & h6 {
+            margin-bottom: 0.9rem;
+        }
+    }
+    &__left {
+        width: 55vw;
+    }
+    &__right {
+        width: 45vw;
+    }
+    &.day {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20.3871px);
+        color: $black;
+    }
+    &.night {
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(20.3871px);
+        color: $white;
+    }
+    & hr {
+        color: $gray;
+        margin-right: 6vw;
+    }
+}

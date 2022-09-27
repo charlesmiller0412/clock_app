@@ -1,0 +1,52 @@
+.main {
+    color: $white;
+    height: 100vh;
+    width: 100vw;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    &__top {
+        width: 100vw;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        padding: 5.6rem 16.5rem 10rem 16.5rem;
+    }
+    &__bottom {
+        position: absolute;
+        bottom: -50%;
+        width: 100vw;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        &--top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 5.6rem 16.5rem 10rem 16.5rem;
+        }
+    }
+}
+
+.showOverlay {
+    bottom: 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.hideQuote {
+    top: -100%;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
