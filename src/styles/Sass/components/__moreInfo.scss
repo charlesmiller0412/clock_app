@@ -32,10 +32,12 @@
     }
     & hr {
         color: $gray;
+        margin-left: 3vw;
         margin-right: 6vw;
+        opacity: 0.25;
     }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 915px) {
     .moreInfo {
         padding: 8vh 6.4rem;
         height: 40vh;
@@ -48,7 +50,7 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .moreInfo {
         padding: 4vh 2.6rem;
         flex-direction: column;

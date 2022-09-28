@@ -47,6 +47,7 @@ h6 {
     line-height: 2.8rem;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .day,
@@ -74,7 +75,7 @@ h6 {
         url("/public/assets/desktop/bg-image-nighttime.jpg");
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 915px) {
     h1 {
         font-size: 17.5rem;
         line-height: 17.5rem;
@@ -115,7 +116,7 @@ h6 {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     h1 {
         font-size: 10rem;
         line-height: 10rem;
@@ -144,7 +145,6 @@ h6 {
         font-size: 1rem;
         line-height: 2.8rem;
         letter-spacing: 0.2rem;
-        white-space: nowrap;
     }
     .day {
         background-image: linear-gradient(
