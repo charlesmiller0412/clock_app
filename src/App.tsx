@@ -78,7 +78,7 @@ function App() {
     async function getLocation() {
         try {
             const res = await axios.get(
-                `https://api.ipbase.com/v2/info?apikey=9RZHrZjEYxQTnZMTjTVsY0S1zU806bpzW8r1CZ8n`
+                `https://api.ipbase.com/v2/info?apikey=${REACT_APP_IP_BASE}`
             );
             updateLocation(
                 res.data.data.location.city.name +
