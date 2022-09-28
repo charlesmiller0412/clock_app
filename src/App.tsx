@@ -6,6 +6,7 @@ import useClockStore from "./appStore";
 import Clock from "./components/clock";
 import Quote from "./components/quote";
 import MoreInfo from "./components/moreInfo";
+const { REACT_APP_IP_BASE } = process.env;
 
 function App() {
     const show = useClockStore((state: any) => state.show);
@@ -62,7 +63,7 @@ function App() {
     async function getLocation() {
         try {
             const res = await axios.get(
-                `https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=${process.env.IP_BASE}`
+                `https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=${REACT_APP_IP_BASE}`
             );
             updateLocation(
                 res.data.data.location.city.name +
