@@ -94,7 +94,7 @@ function App() {
     useEffect(() => {
         getVH();
         getTime();
-        // getLocation();
+        getLocation();
         setInterval(() => {
             getTime();
         }, 5000);
