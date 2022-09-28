@@ -6,6 +6,7 @@ import useClockStore from "./appStore";
 import Clock from "./components/clock";
 import Quote from "./components/quote";
 import MoreInfo from "./components/moreInfo";
+
 const { REACT_APP_IP_BASE } = process.env;
 
 function App() {
@@ -29,6 +30,20 @@ function App() {
     const updateWeekNumber = useClockStore(
         (state: any) => state.updateWeekNumber
     );
+
+    function getVH() {
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+        // We listen to the resize event
+        window.addEventListener("resize", () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+        });
+    }
 
     function handleButton() {
         updateShow(!show);
@@ -63,21 +78,23 @@ function App() {
     async function getLocation() {
         try {
             const res = await axios.get(
-                `https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=${REACT_APP_IP_BASE}`
+                `https://api.ipbase.com/v2/info?apikey=9RZHrZjEYxQTnZMTjTVsY0S1zU806bpzW8r1CZ8n`
             );
             updateLocation(
                 res.data.data.location.city.name +
                     ", " +
                     res.data.data.location.country.alpha2
             );
+            console.log(res.data.data.location.city.name);
         } catch (error) {
             console.error(error);
         }
     }
 
     useEffect(() => {
+        getVH();
         getTime();
-        getLocation();
+        // getLocation();
         setInterval(() => {
             getTime();
         }, 5000);
