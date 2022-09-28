@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./../../Project%20Display%20Images/clockDesktop_.png)
+![](/Project%20Display%20Images/clockDesktop_.png)
 
 ### Links
 
