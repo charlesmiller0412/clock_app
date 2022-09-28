@@ -16,8 +16,10 @@ export default function Clock() {
                         src={morning === true ? dayImg : nightImg}
                         alt="icon"
                     />
-                    good {morning === true ? "morning" : "evening"}, it's
-                    currently
+                    good {morning === true ? "morning" : "evening"}
+                    <span className="clock__top--intro-currentText">
+                        , it's currently
+                    </span>
                 </h4>
                 <div className="clock__top--data">
                     <h1 className="clock__top--data-time">{time}</h1>

@@ -19,8 +19,6 @@
             align-items: flex-end;
             margin: 1.6rem 0;
             width: fit-content;
-            &-time {
-            }
             &-abbv {
                 font-size: 4rem;
                 font-weight: 300;
@@ -30,6 +28,25 @@
             }
         }
     }
-    &__bottom {
+}
+
+@media screen and (max-width: 850px) {
+    .clock {
+        width: 100%;
+        &__top--data-abbv {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .clock {
+        &__top {
+            &--intro {
+                &-currentText {
+                    display: none;
+                }
+            }
+        }
     }
 }

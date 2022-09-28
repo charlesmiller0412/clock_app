@@ -33,6 +33,15 @@ function App() {
         updateShow(!show);
     }
 
+    function getTOD() {
+        let newTime: any = String(time).slice(0, 2);
+        newTime = Number(newTime || "");
+        if (newTime < 12) {
+            updateMorning(true);
+        } else {
+            updateMorning(false);
+        }
+    }
     async function getTime() {
         try {
             const res = await axios.get("http://worldtimeapi.org/api/ip");
@@ -44,12 +53,7 @@ function App() {
             updateDayOfWeek(res.data.day_of_week);
             updateDayOfYear(res.data.day_of_year);
             updateWeekNumber(res.data.week_number);
-            let x: number = Number(time.slice(0, 2));
-            if (x < 12) {
-                updateMorning(true);
-            } else {
-                updateMorning(false);
-            }
+            getTOD();
         } catch (error) {
             console.error(error);
         }
@@ -58,7 +62,7 @@ function App() {
     async function getLocation() {
         try {
             const res = await axios.get(
-                "https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey="
+                `https://api.ipbase.com/v2/info?ip=1.1.1.1&apikey=${process.env.IP_BASE}`
             );
             updateLocation(
                 res.data.data.location.city.name +
@@ -72,7 +76,7 @@ function App() {
 
     useEffect(() => {
         getTime();
-        // getLocation();
+        getLocation();
         setInterval(() => {
             getTime();
         }, 5000);

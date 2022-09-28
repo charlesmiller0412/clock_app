@@ -1,6 +1,6 @@
 .button {
     height: 5.6rem;
-    width: 15rem;
+    width: 14.6rem;
     padding: 0 0.8rem 0 2.1rem;
     display: flex;
     align-items: center;
@@ -26,6 +26,7 @@
         text-transform: uppercase;
     }
     & img {
+        margin-left: 1rem;
         width: 4rem;
         height: 4rem;
         object-fit: none;
@@ -35,5 +36,14 @@
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .button {
+        margin-top: 8rem;
+        &:hover img {
+            opacity: 1;
+        }
     }
 }

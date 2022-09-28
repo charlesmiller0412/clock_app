@@ -28,7 +28,8 @@ h3 {
   text-transform: uppercase;
 }
 
-h4 {
+h4,
+.clock__top--intro-currentText {
   font-size: 2rem;
   line-height: 2.8rem;
   letter-spacing: 0.4rem;
@@ -41,7 +42,7 @@ h5 {
 }
 
 h6 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.8rem;
   letter-spacing: 0.3rem;
@@ -63,9 +64,74 @@ h6 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/public/assets/desktop/bg-image-nighttime.jpg");
 }
 
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 17.5rem;
+    line-height: 17.5rem;
+    letter-spacing: -0.438rem;
+  }
+  h2 {
+    font-size: 4rem;
+    line-height: auto;
+  }
+  h3,
+h4,
+.clock__top--intro-currentText {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.36rem;
+  }
+  h6 {
+    font-size: 1.3rem;
+    letter-spacing: 0.26rem;
+  }
+  .day {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/public/assets/tablet/bg-image-daytime.jpg");
+  }
+  .night {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/public/assets/tablet/bg-image-nighttime.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 10rem;
+    line-height: 10rem;
+    letter-spacing: -0.25rem;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: auto;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.3rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.3rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  h6 {
+    font-size: 1rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.2rem;
+    white-space: nowrap;
+  }
+  .day {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/public/assets/mobile/bg-image-daytime.jpg");
+  }
+  .night {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/public/assets/mobile/bg-image-nighttime.jpg");
+  }
+}
 .button {
   height: 5.6rem;
-  width: 15rem;
+  width: 14.6rem;
   padding: 0 0.8rem 0 2.1rem;
   display: flex;
   align-items: center;
@@ -92,6 +158,7 @@ h6 {
   text-transform: uppercase;
 }
 .button img {
+  margin-left: 1rem;
   width: 4rem;
   height: 4rem;
   object-fit: none;
@@ -103,6 +170,14 @@ h6 {
   -o-border-radius: 50%;
 }
 
+@media screen and (max-width: 850px) {
+  .button {
+    margin-top: 8rem;
+  }
+  .button:hover img {
+    opacity: 1;
+  }
+}
 .clock {
   width: 100%;
   text-align: left;
@@ -134,6 +209,20 @@ h6 {
   margin-bottom: 2.7rem;
   margin-left: 1.1rem;
 }
+
+@media screen and (max-width: 850px) {
+  .clock {
+    width: 100%;
+  }
+  .clock__top--data-abbv {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .clock__top--intro-currentText {
+    display: none;
+  }
+}
 .quote {
   width: 50%;
   color: #ffffff;
@@ -158,6 +247,17 @@ h6 {
   opacity: 1;
 }
 
+@media screen and (max-width: 850px) {
+  .quote__top {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .quote {
+    width: 100%;
+  }
+}
 .moreInfo {
   width: 100vw;
   height: 50vh;
@@ -195,6 +295,39 @@ h6 {
   margin-right: 6vw;
 }
 
+@media screen and (max-width: 850px) {
+  .moreInfo {
+    padding: 8vh 6.4rem;
+    height: 40vh;
+  }
+  .moreInfo hr {
+    display: none;
+  }
+  .moreInfo__left {
+    margin-right: 8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .moreInfo {
+    padding: 4vh 2.6rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .moreInfo__left, .moreInfo__right {
+    width: 100%;
+    justify-content: center;
+  }
+  .moreInfo__left h6, .moreInfo__right h6 {
+    margin-bottom: 0;
+  }
+  .moreInfo__left--timeZone, .moreInfo__left--dayOfYear, .moreInfo__left--dayOfWeek, .moreInfo__left--weekNumber, .moreInfo__right--timeZone, .moreInfo__right--dayOfYear, .moreInfo__right--dayOfWeek, .moreInfo__right--weekNumber {
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+  }
+}
 .main {
   color: #ffffff;
   height: 100vh;
@@ -246,4 +379,38 @@ h6 {
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
+}
+
+@media screen and (max-width: 850px) {
+  .main__top {
+    padding: 6.4rem;
+  }
+  .main__bottom {
+    bottom: -40%;
+  }
+  .main__bottom--top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 6.4rem;
+    height: 60vh;
+  }
+  .showOverlay {
+    top: 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__top {
+    padding: 3rem 2.6rem;
+  }
+  .main__bottom--top {
+    justify-content: flex-end;
+    padding: 4rem 2.6rem;
+  }
 }

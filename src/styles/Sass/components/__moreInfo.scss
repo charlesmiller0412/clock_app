@@ -35,3 +35,42 @@
         margin-right: 6vw;
     }
 }
+@media screen and (max-width: 850px) {
+    .moreInfo {
+        padding: 8vh 6.4rem;
+        height: 40vh;
+        & hr {
+            display: none;
+        }
+        &__left {
+            margin-right: 8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .moreInfo {
+        padding: 4vh 2.6rem;
+        flex-direction: column;
+        justify-content: center;
+        // height: 63%;
+        &__left,
+        &__right {
+            width: 100%;
+            justify-content: center;
+            & h6 {
+                margin-bottom: 0;
+            }
+            &--timeZone,
+            &--dayOfYear,
+            &--dayOfWeek,
+            &--weekNumber {
+                height: 2.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+}

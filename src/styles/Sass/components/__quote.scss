@@ -21,3 +21,16 @@
         }
     }
 }
+
+@media screen and (max-width: 850px) {
+    .quote__top {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quote {
+        width: 100%;
+    }
+}
