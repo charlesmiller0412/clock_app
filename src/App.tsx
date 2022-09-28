@@ -44,7 +44,7 @@ function App() {
     }
     async function getTime() {
         try {
-            const res = await axios.get("http://worldtimeapi.org/api/ip");
+            const res = await axios.get("https://worldtimeapi.org/api/ip");
             let currentTime = res.data.datetime;
             currentTime = currentTime.substring(11, 16);
             updateTime(currentTime);
