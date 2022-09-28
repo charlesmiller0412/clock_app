@@ -1,6 +1,7 @@
 {
     "name": "clock_app",
     "version": "0.1.0",
+    "homepage": "https://charlesmiller0412.github.io/clock_app",
     "private": true,
     "dependencies": {
         "@types/jest": "^27.5.2",
@@ -16,6 +17,8 @@
     },
     "scripts": {
         "sass": "sass src/styles/Sass:src/styles/CSS --watch --no-source-map",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -40,6 +43,7 @@
         ]
     },
     "devDependencies": {
+        "gh-pages": "^4.0.0",
         "sass": "^1.55.0"
     }
 }
